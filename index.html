@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Vendor Delays Visualization</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Vendor Delays to Plant Sankey Diagram</h1>
+    <div id="sankey"></div>
+    <div id="visualization"></div>
+    <div id="annotations">
+        <p>Blue represents DelayDays &le; 0 (shippment on time), Red represents DelayDays &gt; 0 (shippment delay).</p>
+        <p>Vendor 1001's shipment destinations are plants 4 and 7. Plant 4's count of early arrivals is 6855, and the count of delayed arrivals is 1416; plant 7's count of early arrivals is 93, and the count of delayed arrivals is 14.</p>
+        <p>The shipment destinations for vendor 1002 are plants 5 and 8. Plant 5's count of early arrivals is 3037, and the count of delayed arrivals is 591; plant 8's count of early arrivals is 2940, and the count of delayed arrivals is 615.</p>
+        <p>The shipment destination for vendor 1003 is plant 6. The count of early arrivals for plant 6 is 3679, and the count of delayed arrivals is 760.</p>
+    </div>
+    <img id="popup-image" src="vendor1.jpg" style="display: none; position: absolute; top: 100px; left: 100px;; width: 400px; height: auto;z-index: 1000;">
+    <img id="popup-image-vendor1002" src="vendor2.jpg" style="display: none; position: absolute; top: 200px; left: 100px; width: 400px; height: auto; z-index: 1000;">
+    <img id="popup-image-vendor1003" src="vendor3.jpg" style="display: none; position: absolute; top: 300px; left: 100px; width: 400px; height: auto; z-index: 1000;">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

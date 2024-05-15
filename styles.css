@@ -1,0 +1,42 @@
+#sankey {
+  width: 100%;
+  height: 600px;
+  margin: auto;
+}
+
+.link {
+  fill: none;
+  stroke: #000;
+  stroke-opacity: 0.2;
+}
+
+.link:hover {
+  stroke-opacity: 0.5;
+}
+
+.node rect {
+  fill-opacity: .9;
+  shape-rendering: crispEdges;
+}
+
+.node text {
+  fill: #000;
+  font: 10px sans-serif;
+}
+#popup-image {
+  display: none; /* 默认不显示 */
+  position: absolute;
+  top: 100px; /* 初始位置 */
+  left: 100px;
+  width: 200px; /* 初始宽度 */
+  z-index: 1000; /* 保证在最前面显示 */
+}
+
+@media (max-width: 600px) {
+  #popup-image {
+      top: 50px;  /* 调整位置以适应小屏幕 */
+      left: 10px; /* 调整位置以适应小屏幕 */
+      width: 150px; /* 调整尺寸以适应小屏幕 */
+  }
+}
+
